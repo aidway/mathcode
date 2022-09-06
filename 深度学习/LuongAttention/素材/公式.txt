@@ -1,0 +1,23 @@
+\tilde{h}_s \\
+\bar{h}_s \\
+h_t \\
+score
+
+
+c_t=a_t \bar{h}_s
+
+
+
+\begin{equation}
+\operatorname{score}\left(\boldsymbol{h}_{t}, \overline{\boldsymbol{h}}_{s}\right)= \begin{cases}\boldsymbol{h}_{t}^{\top} \overline{\boldsymbol{h}}_{s} & \text { dot } \\ \boldsymbol{h}_{t}^{\top} \boldsymbol{W}_{\boldsymbol{a}} \overline{\boldsymbol{h}}_{s} & \text { general } \\ \boldsymbol{v}_{a}^{\top} \tanh \left(\boldsymbol{W}_{\boldsymbol{a}}\left[\boldsymbol{h}_{t} ; \overline{\boldsymbol{h}}_{s}\right]\right) & \text { concat }\end{cases}
+\end{equation}
+
+
+a_t(s) = \operatorname{softmax}\left(\operatorname{score}(\boldsymbol{h}_{t}, \overline{\boldsymbol{h}}_{s})\right)
+
+
+\begin{equation}
+p\left(y_{t} \mid y_{<t}, x\right)=\operatorname{softmax}\left(\boldsymbol{W}_{\boldsymbol{s}} \tilde{\boldsymbol{h}}_{t}\right)
+\end{equation}
+
+
